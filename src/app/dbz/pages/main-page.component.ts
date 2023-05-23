@@ -4,8 +4,8 @@ import { DbzService } from '../services/dbz.service';
 
 @Component({
   selector: 'app-maing-page',
-  templateUrl: './maing-page.component.html',
-  styleUrls: ['./maing-page.component.css'],
+  templateUrl: './main-page.component.html',
+  styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent {
   personajePorDefecto: Personaje = {
