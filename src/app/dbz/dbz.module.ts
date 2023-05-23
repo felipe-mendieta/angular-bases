@@ -8,7 +8,7 @@ import { MainPageComponent } from './pages/main-page.component';
 @NgModule({
   declarations: [MainPageComponent, PersonajesComponent, AgregarComponent],
   imports: [CommonModule, FormsModule],
-  exports: [],
+  exports: [MainPageComponent],
   providers: [DbzService],
 })
 export class DbzModule {}
