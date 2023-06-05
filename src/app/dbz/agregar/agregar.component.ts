@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-
 import { Personaje } from '../interfaces/dbz.interfaces';
+
 import { DbzService } from '../services/dbz.service';
 
 @Component({
@@ -9,7 +9,9 @@ import { DbzService } from '../services/dbz.service';
 })
 export class AgregarComponent {
   constructor(private dbzService: DbzService) {}
-  @Input('personajePorDefecto') personaje1: Personaje = {
+  // Recibimos dato con @input
+  @Input('personajePorDefecto')
+  personaje1: Personaje = {
     nombre: '',
     poder: 0,
   };
@@ -19,6 +21,7 @@ export class AgregarComponent {
     console.log('agregando emisión de personaje');
     // this.onNuevoPersonaje.emit(this.personaje1);
     this.dbzService.agregarPersonaje(this.personaje1);
+    //limpiamos la variable ya que esta enlazada mediante el 2 way data binding
     this.personaje1 = {
       nombre: '',
       poder: 0,

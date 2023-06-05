@@ -8,14 +8,14 @@ import { DbzService } from '../services/dbz.service';
   styleUrls: ['./main-page.component.css'],
 })
 export class MainPageComponent {
-  personajePorDefecto: Personaje = {
-    nombre: 'Personaje Por defecto',
+  constructor(private dbzService: DbzService) {}
+
+  personajePorDefectoDesdeTS: Personaje = {
+    nombre: 'defaultHero',
     poder: 3000,
   };
   agregarNuevoPersonaje(parametro1: Personaje): void {
     this.dbzService.personajes.push(parametro1);
     console.log(parametro1);
   }
-
-  constructor(private dbzService: DbzService) {}
 }

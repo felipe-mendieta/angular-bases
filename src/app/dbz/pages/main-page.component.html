@@ -1,29 +1,22 @@
 <h1>Dragon Ball Z</h1>
-<hr>
+<hr />
 
 <div class="row">
-    
-    <div class="col">
-        <!-- <app-personajes [arraypersonajes]="personajes">
+  <div class="col">
+    <!-- <app-personajes [arraypersonajes]="personajes">
 
         </app-personajes> -->
-        <app-personajes >
+    <app-personajes> </app-personajes>
+  </div>
 
-        </app-personajes>
-        
-    </div>
-
-    <div class="col">
-      <!-- <app-agregar 
+  <div class="col">
+    <!-- <app-agregar 
         [personajePorDefecto]="personajePorDefecto"
         (onNuevoPersonaje)="agregarNuevoPersonaje( $event)"
 
       ></app-agregar> -->
-      <app-agregar 
-        [personajePorDefecto]="personajePorDefecto"
-        
-      ></app-agregar>
-    </div> 
-
-
+    <app-agregar
+      [personajePorDefecto]="personajePorDefectoDesdeTS"
+    ></app-agregar>
+  </div>
 </div>

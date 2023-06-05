@@ -1,5 +1,23 @@
 <h3>Personajes</h3>
-<hr>
-<ul>
-    <li *ngFor="let person of arraypersonajes">{{person.nombre}} - {{person.poder | number }} </li>
+<hr />
+<ul class="list-group">
+  <li
+    class="list-group-item"
+    *ngFor="
+      let person of arraypersonajes;
+      let i = index;
+      let isFirst = first;
+      let isLast = last;
+      let isEven = even;
+      let isOdd = odd
+    "
+    [ngClass]="{
+      'list-group-item-info': isOdd,
+      'list-group-item-success': isLast
+    }"
+  >
+    <span class="text-primary">{{ i + 1 }} </span>
+    <span>{{ person.nombre }} -</span>
+    <strong> {{ person.poder | number }} </strong>
+  </li>
 </ul>
