@@ -6,17 +6,20 @@
     <!-- <app-personajes [arraypersonajes]="personajes">
 
         </app-personajes> -->
-    <app-personajes> </app-personajes>
+    <app-personajes
+      (onDeletePersonaje)="deletePersonaje($event)"
+    ></app-personajes>
   </div>
 
   <div class="col">
+    <!-- Utilizando OUTPUT -->
     <!-- <app-agregar 
         [personajePorDefecto]="personajePorDefecto"
         (onNuevoPersonaje)="agregarNuevoPersonaje( $event)"
 
       ></app-agregar> -->
     <app-agregar
-      [personajePorDefecto]="personajePorDefectoDesdeTS"
+      [personajePorDefecto]="personajeDefaultFromMainPageTS"
     ></app-agregar>
   </div>
 </div>

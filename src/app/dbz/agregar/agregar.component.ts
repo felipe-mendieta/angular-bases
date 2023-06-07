@@ -21,6 +21,7 @@ export class AgregarComponent {
     console.log('agregando emisión de personaje');
     // this.onNuevoPersonaje.emit(this.personaje1);
     this.dbzService.agregarPersonaje(this.personaje1);
+    // debugger;
     //limpiamos la variable ya que esta enlazada mediante el 2 way data binding
     this.personaje1 = {
       nombre: '',

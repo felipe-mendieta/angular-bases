@@ -2,7 +2,7 @@
 <hr />
 <ul class="list-group">
   <li
-    class="list-group-item"
+    class="list-group-item d-flex justify-content-between"
     *ngFor="
       let person of arraypersonajes;
       let i = index;
@@ -16,8 +16,14 @@
       'list-group-item-success': isLast
     }"
   >
-    <span class="text-primary">{{ i + 1 }} </span>
-    <span>{{ person.nombre }} -</span>
-    <strong> {{ person.poder | number }} </strong>
+    <div>
+      <span class="text-primary">{{ i + 1 }} </span>
+      <span>{{ person.nombre }} -</span>
+      <strong> {{ person.poder | number }} </strong>
+    </div>
+    <button
+      (click)="deletePersonaje(person.id)"
+      class="btn btn-danger"
+    ></button>
   </li>
 </ul>
